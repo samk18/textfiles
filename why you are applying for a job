@@ -87,3 +87,75 @@ Role: IT Developer at Scania Group
 Email: rahul.reddy.katiki.reddy@ericsson.com
 Phone no: +46 855371879
 Position: Senior Software Developer
+
+
+
+
+
+663280 C developers for the World's fastest 5G userplane
+Ericsson  Göteborg, Vas
+
+The reason why I want to move out from Ericsson is I am not given big features to work on, getting small features to work on. and I felt it is not using my abilities to the fullest or challenging me enough and no longer finding the work fulfilling or enjoying my work as much.
+I am looking for an opportunity where I can put my skills to the best possible use. I hope this position will full fill my requirements and drive my career forward.
+
+list<int> gqlist1, gqlist2;
+
+ gqlist1.push_back(i * 2) push element at back
+gqlist2.push_front(i * 3) push element at front
+
+ gqlist1.front() get first element
+ gqlist1.back(); get last element
+
+ gqlist1.pop_front() pop front
+gqlist2.pop_back() pop back
+
+print the stack
+void showq(queue<int> gq)
+{
+    queue<int> g = gq;
+    while (!g.empty()) {
+        cout << '\t' << g.front();
+        g.pop();
+    }
+    cout << '\n';
+}
+
+other method to print stack
+deque<int>::iterator it;
+    for (it = g.begin(); it != g.end(); ++it)
+        cout << '\t' << *it;
+    cout << '\n';
+
+priority queue
+biggest element comes at first
+
+initalize the queue
+priority_queue<int> gquiz;
+    gquiz.push(10);
+    gquiz.push(30);
+
+// gives the first element of queue
+gquiz.top()
+// pop the first element at queue
+gquiz.pop()
+
+// intialize the vecter in different ways
+   vector<int> vect1{ 10, 20, 30 };
+ 
+    vector<int> vect2(vect1.begin(), vect1.end());
+ 
+    for (int x : vect2)
+        cout << x << " ";
+
+//////////////
+filled with 5 values for 10 numbers
+vector<int> vect1(10);
+    int value = 5;
+    fill(vect1.begin(), vect1.end(), value);
+
+
+Proficient in C/C++ Programming Language.
+
+
+
+
