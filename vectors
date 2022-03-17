@@ -1,0 +1,193 @@
+list<int> gqlist1, gqlist2;
+
+ gqlist1.push_back(i * 2) push element at back
+gqlist2.push_front(i * 3) push element at front
+
+ gqlist1.front() get first element
+ gqlist1.back(); get last element
+
+ gqlist1.pop_front() pop front
+gqlist2.pop_back() pop back
+
+print the stack
+void showq(queue<int> gq)
+{
+    queue<int> g = gq;
+    while (!g.empty()) {
+        cout << '\t' << g.front();
+        g.pop();
+    }
+    cout << '\n';
+}
+
+other method to print stack
+deque<int>::iterator it;
+    for (it = g.begin(); it != g.end(); ++it)
+        cout << '\t' << *it;
+    cout << '\n';
+
+priority queue
+biggest element comes at first
+
+initalize the queue
+priority_queue<int> gquiz;
+    gquiz.push(10);
+    gquiz.push(30);
+
+// gives the first element of queue
+gquiz.top()
+// pop the first element at queue
+gquiz.pop()
+
+// intialize the vecter in different ways
+   vector<int> vect1{ 10, 20, 30 };
+ 
+    vector<int> vect2(vect1.begin(), vect1.end());
+ 
+    for (int x : vect2)
+        cout << x << " ";
+
+//////////////
+filled with 5 values for 10 numbers
+vector<int> vect1(10);
+    int value = 5;
+    fill(vect1.begin(), vect1.end(), value);
+
+
+Proficient in C/C++ Programming Language.
+
+
+
+
+
+The eth_control process main task is to initiate creation of
+   the TCP socket and forward outgoing signals to the target
+   through the TCP socket.
+
+ETH_OPEN_REQ- The signal number for a signal used to start eth communication.
+Containing the TCP port and IP.
+
+ETH_CLOSE_REQ- The signal number for a signal used to close eth communication.
+Expands to:
+
+ETH_SEND_NS_SUBSCRIBE_FWD- Request to execute ns_subscribe command on target.
+Expands to:
+
+ETH_SEND_NS_UNSUBSCRIBE_FWD-Request to execute ns_unsubscribe command on target.
+
+TH_RUN_CMDS_CPM_REQ-Used to send request to run commands on cpm
+
+ITCGW_START_REQ-Signals to handle itcgw start
+
+ETH_RCS_VERSION_REQ-Used for retrieving up version infomation from rcsagent
+
+ETH_ROUTER_CMD_FPGA_INFO_REQ_FWD-Used for retrieving FPGA version infomation from rcsAgent
+
+eth_receive process is initiated from the eth_sender process in order to
+  receive incoming TCP messages. Received messages are then forwarded to the process
+  that has registered itself (by calling ETH_regReceiver) as a receiver of
+  the message type included in the incoming message.
+
+ETH_ROUTER_CMD_ENDPOINT_DATA
+
+ETH_ROUTER_CMD_FAULTY_DSPS
+
+BHP_getVlanByPort
+
+BHP_getMacAddrByPort
+
+ETH_resetPorts
+
+ETH_updateFaultyDsps
+
+ETH_insertNewPort
+
+BHP_getCpmVlanId(
+x
+
+
+Cunit
+that the registry is used to keep track of all test cases and the result. To run the test cases in Bait the CUnit TestRun block is changed and the functions to run test suites and test cases are implemented in a way more suitable for Bait. The file TestRun.c is changed to run test cases in separate HPP processes. By running each testcase function in its own HPP process, it is easy to abort a test case by just killing the process. T
+CUNIT_initalizeTestBenchParameters 
+This function loops through all test suites and test cases and disables according to
+the config parameters that have been set.
+
+listTests()- List the registered test cases and test suites.
+  If no test suites found, return BHP_FAILED.
+  Otherwise print the formatted test suites/cases list and return BHP_OK.
+
+unitReset
+etCunitList
+getCunitResultInJson
+getCunitResult
+getCunitList
+
+
+create test
+-Internal function to create a new test case having the specified parameters.This function creates a new test having the specified name and test function.The strName cannot be NULL (checked by assertion), but the function pointermay be. A pointer to the newly-created test is returned, or NULL if therewas an error allocating memory for the new test. It is the responsibilityof the caller to destroy the returned test (use cleanup_test() before freeingthe returned pointer).
+
+Parameters:
+strSuiteName – Name for the test suite.
+strName – Name for the new test.
+timeout – Timeout for the new test.
+pTestFunc – Test function to call when running this test.
+arg_p – Pointer to send as argument.
+type – CU type of test function.
+
+create suite
+/*=================================================================
+ *  Private static function definitions
+ *=================================================================*/
+/*------------------------------------------------------------------------*/
+/**
+ *  Internal function to create a new test suite having the specified parameters.
+ *  This function creates a new test suite having the specified name and
+ *  initialization/cleanup functions.  The new suite is active for execution during
+ *  test runs.  The strName cannot be NULL (checked by assertion), but either or
+ *  both function pointers can be.  A pointer to the newly-created suite is returned,
+ *  or NULL if there was an error allocating memory for the new suite.  It is the
+ *  responsibility of the caller to destroy the returned suite (use cleanup_suite()
+ *  before freeing the returned pointer).
+ *
+ *  @param strName Name for the new test suite (non-NULL).
+ *  @param timeout Timeout for the new test suite.
+ *  @param pInit   Initialization function to call before running suite.
+ *  @param pClean  Cleanup function to call after running suite.
+ *  @param pInitWithArg Initialization function with argument to call before running suite.
+ *  @param initArg_p Argument to send to init function.
+ *  @param pCleanWithArg Cleanup function with argument to call after running suite.
+ *  @param cleanArg_p Argument to send to cleanup function.
+ *  @return A pointer to the newly-created suite (NULL if creation failed)
+
+
+
+Scrum is a subset of Agile. It is a lightweight process framework for agile development, and the most widely-used one. A “process framework” is a particular set of practices that must be followed in order for a process to be consistent with the framework
+
+
+
+
+
+
+
+
+
+
+
+
+
+hardwhy are you leaving the job
+
+I was no longer finding the work fulfilling or enjoying my work as much.
+I didn’t feel the job was using my abilities to the fullest or challenging me enough.
+looking for  a job with better career growth opportunities
+role that’s more closely aligned with your long term career goals
+
+659678 - virtual latorms sara adderson
+
+661016   experienced researcher
+Hi Pontus,
+SW Developer EDA (642520)
+
+
+
+
