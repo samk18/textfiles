@@ -1,0 +1,11 @@
+
+
+BHP_returnTypeE
+typedef enum BHP_returnTypeE
+{
+  BHP_OK = 0,
+  BHP_FAILED = 1,
+  BHP_TIMEOUT = 2,
+  BHP_FUNC_ID_NOT_REGISTERED = 3,
+  BHP_END_OF_FILE = 4
+} BHP_

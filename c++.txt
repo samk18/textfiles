@@ -1,0 +1,21 @@
+Virtual
+A C++ virtual function is a member function in the base class that you redefine in a derived class. 
+It is declared using the virtual keyword. It is used to tell the compiler to perform dynamic linkage or late binding on the function.
+That is, virtual keyword tells the compiler not to make the decision (of function binding) at compile time, rather postpone it for runtime".
+
+making destructor as protected
+If the base class destructor is private or protected then you cannot call delete through the base-class pointer.  
+
+Use a protected destructor to prevent the destruction of a derived object via a base-class pointer.
+It limits access to the destuctor to derived classes. And it prevents automatic (stack) objects of class base.
+
+
+
+when we create an instance of the Derived class using a Base class pointer and  when we delete the pointer object using the delete keyword in C++, the destructor of the Base class would be called but the destructor of the Derived class would simply be ignored. The reason is that the destructor is simply another method and so when the delete keyword is used to delete the pointer instance, the type of the pointer would be considered and not its context. And, because the type of the pointer is of type Base, the destructor of the Base class would only be invoked. This might create memory leaks as the instance of the 
+derived class would still remain in memory even after the pointer instance has been deleted/destroyed from memory. To avoid such potential memory leak issues, virtual destructors are used.
+
+
+If the destructor of the base class is protected, you can not destroy derived objects using a base class pointer; therefore, the destructor must not be virtual. ... 
+If the destructor of a class Base is protected, you can only derive Derived from Base and use Derived
+
+ you cannot call delete through the base-class pointer. Use a protected destructor to prevent the destruction of a derived object via a base-class pointer. It limits access to the destuctor to derived

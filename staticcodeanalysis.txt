@@ -1,0 +1,63 @@
+Static code analysis is a method of debugging done by examining an application’s source code before a program is run. This is usually done by analyzing the code against a given set of rules or coding standards.
+
+What does this address?
+These often address code vulnerabilities, code smells and adherence to commonly accepted coding standards. These include common developer errors which are often found by “Code Peer Reviews”. 
+
+Coding and compliance standards need to be met
+
+Static Analysis is the automated analysis of source code without executing the application. When the analysis is performed during program execution then it is known as Dynamic Analysis. Static Analysis is often used to detect: Security vulnerabilities. Performance issues.
+
+
+
+In which stage of the software development lifecycle can we use static code analysis?
+Static code analysis is usually incorporated at any stage after the “Code Development” phase and before “Unit/Component/Integration” testing phases. In some cases, CI/CD pipelines incorporate Static analysis reports as a quality gate for code promotion.
+
+Benefits
+Among other benefits, the ability to identify weaknesses in the code and to adhere to strict development standards help reduce potential production issues. These also provide “Test Coverage” reports that describe the degree to which the code has been exercised.
+
+Limitations
+In real life, what works for “Joe” doesn’t work for “Jane”. Static code analysis treats both the same since it cannot see the data.
+
+Consider the following pseudo code: 
+
+function getFullName(firstName) {
+
+if (firstName == “Joe”)
+
+return “Joe Smith”
+
+if (firstName == “Jane”)
+
+return “Dave” // This is incorrect business logic
+
+if (firstName != “Joe or Jane”)
+
+return “Joey” 
+
+}
+
+In the above example, static code analysis provides no understanding of developer intent. A user expecting “Jane’s” full name as “Jane Doe” gets “Dave”. Any other name returns “Joey”. Any downstream application expecting a valid user would now face runtime errors or exceptions.
+
+Issues like these could easily pass “Static Code analysis rules”, JUnits, even “Code coverage” reports. Production is the “Wild Wild West” and often contains a plethora of business flavors. “Production scenarios” don’t adhere to any given set of rules.
+
+Finally, automated static code coverage tools often provide a false sense of security that everything is being validated. The truth is that the reports are only as good as the underlying rules that govern them.
+
+Dynamic Code Analysis
+Dynamic code analysis is the method of debugging by examining an application during or after a program is run. Since the source code can be run with a variety of different inputs, there isn’t a given set of rules that can cover this style.
+
+What does this address?
+These address runtime vulnerabilities that occur due to variations in business context. For example, the code snippet from above would be flagged by dynamic code analysis. Tools such as OverOps take this a few steps further. 
+
+For every runtime event, OverOps answers what happened, when it happened and why it happened.
+OverOps enables the detection, classification and prioritization of all runtime anomalies on multiple facets.
+In which stage of the SDLC (Software Development Lifecycle) can we use Dynamic code analysis?
+These can be used in multiple places. 
+
+For production, dynamic code analysis provides information to help troubleshoot production incidents quickly. 
+For pre-production, dynamic code analysis prevents bad code from going into production. These can be used in conjunction with CI/CD tools as a quality gate for code promotion.
+Benefits
+In production, dynamic code analysis helps provide visibility to application issues, reducing MTTI for production incidents. Overops goes even deeper – determining the exact offending line of source code with variable values.
+
+
+Limitations
+If the code doesn’t run, it doesn’t get analyzed. In addition, dynamic code analysis cannot perform the function of static code analysis tools, so it’s best used in conjunction with them.

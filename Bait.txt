@@ -1,0 +1,179 @@
+The main concept of Bait makes it possible for a BB developer to create test benches for the EMCA
+
+ that can run on different target types, e.g., SVP
+
+
+
+
+ or HW, without any changes of the EMCA
+
+ load module. Bait simulates also the MP
+
+ which means that the EMCA
+
+ platform and application can behave as in a real node, but the developer doesn't need to use a whole RBS for testing. When running on HW, the MP
+
+ is transparent for the user.
+
+
+Bait introduces a test environment for DSP
+
+ design with a client-server model. This means that the test benches execute on host and target simultaneously. The test benches execute on a Linux host and communicate with the target code using high speed communication links. The host test bench can also stub application services and send/receive signals to/from the target application.
+
+Bait Overview
+
+
+HW is just one target type that can be used to run a test bench with Bait. The main use case with Bait is to be able to run test benches on EMCA
+
+ regardless which target type is used. The same EMCA
+
+ load module and the same test bench on host can be used on any target type. The target types supported is mainly SVP
+
+
+
+
+, HW and BBIOnHost, but could also be any type of target that behaves like an EMCA
+
+. E.g. ASIC design has used Palladium as target with Bait.
+
+Bait "simulates" the RCS applications when running a test bench on EMCA
+
+. That means Bait load and start the EMCA
+
+ in the same manner as in a real node. The software in the EMCA
+
+ do not need to know who is controlling it. The EMCA
+
+ application is mainly using ITC to communicate with the outer world. The ITC communication link is setup between the EMCA
+
+ and Bait (host). Bait terminates the ITC stack so that the Ethernet packets sent/received are handled in Bait (host) regardless of the target type used. This means that when Bait uses HW, it is not RCS that terminates the ITC stack. The raw Ethernet packets are just transferred between Bait (host) and the EMCA
+
+. This is achieved by tunneling all Ethernet traffic to and from the EMCA
+
+ through a TCP
+
+
+
+ port. The protocol over the TCP
+
+
+
+ port is internally Bait specific but is implemented by all target types that can be used. So both SVP
+
+
+
+
+ and ASIC design (Palladium) has implemented this TCP
+
+
+
+ port.
+
+For HW, Bait uses the TCP
+
+
+
+ port with the ethRouter that is an RCS application running on all boards in the BBI
+
+
+ lab. The ethRouter is responsible to just forward all Ethernet packets to/from the EMCA
+
+ and the TCP
+
+
+
+ port. Currently we have a workaround and use the LOAD port in IELL
+
+ for all kind of Ethernet packets. Otherwise will RCS terminate Ethernet packets for the ITC stack and that is not what we want.
+
+The ethRouter application makes HW look like SVP
+
+
+
+
+ from a Bait (host) perspective.
+
+So when Bait runs a test bench, the responsibility of loading and booting the EMCA
+
+ is in Bait (host) by communicating with the EMCA
+
+ through Ethernet. The boot sequence has been implemented in Bait. Also, the full ITC (Linx) stack has been implemented in Bait to be able to communicate with EMCA
+
+.
+
+Bait see the EMCA
+
+ through a TCP
+
+
+
+ port regardless of target type. Bait is responsible to handle all functionality needed from the CPM side in order to run EMCA
+
+ applications in a way similar to real nodes as possible.
+
+Bait will use EMCA
+
+-GDB as target debugger enabling it to run on different EMCA
+
+ targets like SVP
+
+
+
+
+ and HW using the same load modules. Actually any target implementing the Bait comm interface can be used, e.g. Palladium. The target can also be Linux host, compiling the EMCA
+
+ code for x86. The benefits of the Bait concept are listed below.
+
+Small load modules for the target will decrease the turnaround time when compiling and debugging.
+Fast communication link for test data will decrease the execution time of each test case.
+Using SVP
+
+
+
+
+ as simulated target can decrease debugging time.
+Bait is able to run on both simulators and real HW targets.
+Bait manages HW resources in a pool.
+Fast communication link for traces will not slow down test execution when enabling a lot of traces.
+FlexDSP traces are parsed in real time.
+Traces can be received from real EMCA
+
+ HW and can be used instead of printf.
+Bait is compatible with BTE
+
+
+, Basic Test Environment used in BBI
+
+
+ and LTE.
+It is possible to do negative testing. Test cases can crash the target and Bait will restart the target and continue with the next test case.
+Unexpected target crashes are detected by Bait and core dumps are taken. The target is restarted and the next test suite/case can continue.
+It is possible to create test benches that run on host only. The SUT (flexDSP and/or RCS application) can be compiled for Linux together with the test code and dynamically linked to Bait. The host platform in Bait is very similar to RCS, OSE
+
+ and LPP
+
+.
+There are no memory constraints for test bench code running on host.
+A reference model can be integrated in the test bench running on host.
+CUnit test framework is used in Bait.
+LAT
+
+
+ event (RTT
+
+
+) stored in CM and read by BHP.
+EMCA
+
+-GDB can be used for debugging.
+
+
+
+
+Bait is a test framework for development of FlexDSP code for EMCA.
+
+
+— By using Bait it is possible to run test benches on both simulated and real
+hardware without having to rebuild the EMCA load module.
+
+

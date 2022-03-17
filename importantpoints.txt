@@ -1,0 +1,21 @@
+Hi Axel,
+Thank you for sending the new role. This role seems to be interesting as it contains all the tools & technologies that I am looking for. could you consider me for this role as I am very interested to this position?
+Here is a brief summary of my experience working with .
+
+ With a strong foundation in Computer Science and overa year of hands-on experience working with various technologies in internships & a Real-time Environment,I’m confident that I’d be a strong addition to your esteemed organization.
+With software development, there is always something new to explore &learn. I enjoy exploring technologies & applying them in projects thatrequires me to work outside my comfort & knowledge set. Your listedrequirements closely match my areas of interest and skills. 
+While working as a software development intern at IISc India, I gainedsubstantial experience building a data extractor application based on newtechnologies such as Python, and working with various electronicmachines through embedded programming, Developed an application that connectsmultiple hardware devices to lightweight software applications using embeddedsystems. I also worked as an intern from 2 other prestigious organizations& gained experience with new technologies.. I’ve also worked as an intern at IITGandhinagar, India under a senior professor and built a challenging project -Virtual Programming Lab software which can be used to conduct codingexaminations using Java as backend technology & Ember JS as front-endframework and deployed them using docker, Kubernetes, Aws. While pursuing my masters at BTH, I also worked as a ProjectEngineer at the Husqvarna AB group where I was primarily responsible to developa machine learning-based application to detect the usage patterns oflawnmowers. We faced multiple challenges such as scaling to model usingreal-time data, the need for implementation of robust testing methods andsuccessfully overcame them in a very short period. Interning at theseorganizations provided me with the opportunity to put my coding knowledge inreal-time environments and made me face a few challenges such as adapting tovarious work cultures, exploring new technologies & frameworks, identifying& resolving bugs and bottlenecks, etc. In all the internships we worked on,I’ve demonstrated my ability to hit deadlines, strong attention to detail, andimplement production-ready code.
+I am confident that my background and knowledge in the Computer Science arenacoupled with my strong technical skills will be useful at the company and Ilook forward to speaking with you further about this role. I have enclosed myresume that further details my relevant skill set, accomplishments, andexperience. , I would be interested in Go as Go is one of the fastest-growing technology that everyone is using now Moreover it is built on C++ which I am familiar with that and Previously I have worked with Go when I was in Karlskrona.   I am having strong knowledge in Java, Python and am very passionate about implementing projects using mentioned technologies. I am having 2 years of real-time working experience with Java & python.  I have also worked with different tools & technologies and I am going to discuss them in more detail in the interview. please check out my CV for more information. Thank you for your consideration, 
+Please let me know if you need any additional details from me.Looking forward to hearing from you.
+Thank you,Best Regards,Sai Manikanta Munukoti.
+
+
+
+    { %
+  \begin{cvitems} % Description(s) bullet points
+       	\textbf{ Minghui Liu } \hspace{4cm} \textbf{Udhay Vuribindi S} \hspace{4cm} \textbf {Björn Ringberg} \newline
+       	Manager BBI BAIT \hspace{3.4cm} Operative Product Owner \hspace{3.3cm}  Line Manager BAM-ADP \newline Product Development Leader \hspace{2cm} Ericsson AB \hspace{5cm} Ericsson \newline Ericsson AB  \hspace{4.2cm} Lund, Sweden \hspace{4.7cm} Karlskrona, Sweden \newline Lund, Sweden \hspace{3.8cm} udhay.vuribindi.s@ericsson.com \hspace{2.5cm}  bjorn.ringberg@ericsson.com \newline minghui.liu@ericsson.com \hspace{2.5 cm } +46761185763 \hspace{4.6cm} +46 733495435\newline +46730958138
+       \end{cvitems}
+      }
+
+

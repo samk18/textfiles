@@ -1,0 +1,68 @@
+# a = bar graph
+a=[2,4,3,1]
+step=[]
+step_number=1
+# no of bars
+n=4
+def solution(a,p,c):
+    print(d)
+    
+    if(d[p]!=-1):
+          return d[p] 
+    l1=0
+    l2=0
+    r1=0
+    r2=0
+    if(p-2>=0):
+        if(a[p-2]<=a[p]):
+          l2=1+solution(a,p-2,c+1)
+    if(p-1>=0):
+        if(a[p-1]<=a[p]):
+          l1=1+solution(a,p-1,c+1)
+    if(p+2<len(a)):
+        if(a[p+2]<=a[p]):
+          r2=1+solution(a,p+2,c+1)
+    if(p+1<len(a)):
+        if(a[p+1]<=a[p]):
+          r1=1+solution(a,p+1,c+1) 
+    
+    
+    if(l2>l1):
+        lef=l2
+        lp=p-2
+    else:
+        lef=l1 
+        lp=p-1
+    if(r2>r1):
+        rig=r2 
+        rp=p+2
+    else:
+        rig=r1 
+        rp=p-1
+    
+    if(lef>rig):
+        d[p]=lef
+        step[c]=lp
+        return lef 
+    else:
+        d[p]=rig 
+        step[c]=rp
+        return rig
+        
+d = [-1 for i in range(n)]
+step = [-1 for i in range(2*n)]
+maxnoofjumps=0
+k=0
+for i in range(n):
+    if(d[i]==-1):
+        solution(a,i,0)
+    
+    if(maxnoofjumps<d[i]):
+        maxnoofjumps=d[i]
+        k=i 
+
+d = [-1 for i in range(n)]
+step = [-1 for i in range(2*n)]
+
+print(maxnoofjumps)
+print("position at step",step[step_number])

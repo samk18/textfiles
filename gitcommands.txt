@@ -1,0 +1,86 @@
+
+
+git log --oneline --graph --all
+
+to see what work made by him
+git show
+
+work on changes where i made stash
+git stash branch oldidea
+
+git rebase -i HEAD~2  
+git blame
+
+string.h cstring
+
+
+find . -type f -name '*.cpp' \
+  -exec sed -i 's/string.h/cstring/g' '{}' \;
+
+ * © Ericsson AB 2014 All rights reserved.   
+./tools/bait/sw/**
+bfns/src/bfns.cpp
+/tc/src/tc_ltc_so.cpp
+// codechecker_confirmed [DeadStores] suppress deadcode
+tc_ltc_so.cpp
+[DeadStores]
+ /* codechecker_false_positive [all] suppress all checker results */
+/bstr/src/bstrwrap.cpp
+time.h ctime
+stdlib.h cstdlib
+string.h cstring
+stdarg.h cstdarg
+ctype.h cctype
+stdint cstdint
+signal.h
+errno.h 
+time.h 
+stdio.h 
+inttypes
+limits.h
+assert.h
+stddef.h
+setjmp.h
+stdbool.h
+
+  569  find . -type f -name '*.cpp'   -exec sed -i 's/all/newword/g' '{}' \;
+  570  gedit hpp_btb.cpp
+  571  find . -type f -name '*.cpp'   -exec sed -i 's/ERICSSON/newword/g' '{}' \;
+  572  gedit hpp_btb.cpp &
+  573  find . -type f -name '*.cpp'   -exec sed -i 's/Ericsson/newword/g' '{}' \;
+  574   find /myprojects -type f -name '*.cpp' -print0 | 
+  575   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's/Ericsson/newword/g'
+  576  gedit hpp_btb.cpp &
+  577   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's/stdio.h/newword/g'
+  578   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's/sys/stat.h/newword/g'
+  579   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+sys/stat.h+https://www.cyberciti.biz+g'
+  580  cd ..
+  581  ls
+  582   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+string.h+cstring+g'
+  583   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+sys/time.h+https://www.cyberciti.biz+g'
+  584  setxkbmap se
+  585   find /src -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+sys/time.h+https://www.cyberciti.biz+g'
+  586  ls
+  587   find /src -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+sys/time.h+https://www.cyberciti.biz+g'
+  588   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+sys/stat.h+https://www.1yberciti.biz+g'
+  589   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+hpp/hpp.h+https://www.1yberciti.biz+g'
+  590   find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's+hpp/hpp.sig+https://www.1yberciti.biz+g'
+ 
+
+
+sys/time
+linux/limits
+
+#include <cstdint>
+#ifdef __cplusplus
+# include <cstdio>
+#else
+# include <stdio.h>
+#endif
+
+ 
+
+
+
+
+ 

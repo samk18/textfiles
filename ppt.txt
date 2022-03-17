@@ -1,0 +1,162 @@
+Compilation
+
+// set of stages that source code goes through so that executable object code can be produced.
+
+
+// The compiler checks the source code for the syntactical or structural errors, and if the source code is error-free, then it generates the object code.
+//all the programs written in C use library functions. These library functions are pre-compiled, and the object code of these library files is stored with '.lib' (or '.a') extension. 
+The main working of the linker is to combine the object code of library files with the object code of our program.
+//The output of the linker is the executable file. The name of the executable file is the same as the source file but differs only in their extensions.
+
+
+makefile
+ Make is a cross-platform tool which will look for Makefiles that contain a set of rules
+
+A makefile is a text file that contains instructions for how to compile and link (or build) a set of source code files. 
+A program (often called a make program) reads the makefile and invokes a compiler, linker, and possibly other programs to make an executable file.
+ Makefile (or makefile ), which defines set of tasks to be executed. You may have used make to compile a program from source code.
+
+
+Build systems
+A build system is basically a program that knows how to build other programs, or in other words a tool that provides automated building.
+ Building an application includes compiling, linking and packaging the code into a usable or executable form.
+
+
+
+
+Bazil
+ tool that automates software builds and tests. 
+Bazel is an open-source build and test tool similar to Make, Maven, and Gradle. It uses a human-readable, high-level build language.
+ Bazel supports projects in multiple languages and builds outputs for multiple platforms.
+ Bazel supports large codebases across multiple repositories, and large numbers of users.
+
+Bazel caches all previously done work and tracks changes to both file content and build commands.
+
+
+workspace
+you can build a project, you need to set up its workspace. A workspace is a directory that holds your project’s source files and Bazel’s build outputs. 
+It also contains files that Bazel recognizes as special:
+
+build file
+A BUILD file contains several different types of instructions for Bazel. The most important type is the build rule, which tells Bazel how to build the desired outputs, 
+such as executable binaries or libraries. 
+Each instance of a build rule in the BUILD file is called a target and points to a specific set of source files and dependencies. A target can also point to other targets.
+
+ccbinary
+ The rule tells Bazel to build a self-contained executable binary from the hello-world.cc source file with no dependencies.
+
+ how to link multiple build directories by building multiple libraries in different packages and then connecting it up with the main application.
+
+Unit testing
+type of testing in which individual units or functions of software testing.Its primary purpose is to test each unit or function. A unit is the smallest testable part of an application. 
+It mainly has one or a few inputs and produces a single output.
+a testing technique using which individual modules are tested to determine if there are any issues by the developer himself. It is concerned with functional correctness of the standalone modules.
+The main aim is to isolate each unit of the system to identify, analyze and fix the defects
+he aim behind unit testing is to validate unit components with its performance.
+Unit Testing of software product is carried out during the developme nt of an application.
+Reduces Cost of Testing as defects are captured in very early phase.
+
+Improves design and allows better refactoring of code.
+
+Unit Tests, when integrated with build gives the quality of the build as well.
+
+
+Integration testing
+
+Integration testing (sometimes called integration and testing, abbreviated I&T) is the phase in software testing 
+in which individual software modules are combined and tested as a group. 
+The focus of the integration testing level is to expose defects at the time of interaction between integrated components or units.
+Once all the components or modules are working independently, then we need to check the data flow between the dependent modules is known as integration testing.
+
+IDE
+stop/pause program execution by specifying conditions
+
+What is IDE give its examples and advantages?
+Image result for integrated development environment (ide) example
+IDE's can be used to create software applications, drivers and utilities. It allows developing software in any programming language without spending much time on language syntax. 
+IDE has the ability to correct syntaxes, gives a warning about memory leaks, assist in writing quality of code, etc.
+
+gdb
+
+TCP/ip 
+
+TCP/IP stands for Transmission Control Protocol/Internet Protocol and 
+is a suite of communication protocols used to interconnect network devices on the internet.
+it determines how computers transfer data from one device to another. ... To ensure that each communication reaches its intended destination intact, 
+the TCP/IP model breaks down data into packets and then reassembles the packets into the complete message on the other end.
+
+The network access layer, also known as the data link layer, handles the physical infrastructure that lets computers communicate with one another over the internet. 
+This covers ethernet cables, wireless networks, network interface cards, device drivers in your computer, and so on.
+
+The network access layer also includes the technical infrastructure — such as the code that converts digital data into transmittable signals — that makes network connection possible.
+
+icon_02Layer 2: Internet Layer
+The internet layer, also known as the network layer, controls the flow and routing of traffic to ensure data is sent speedily and accurately. 
+This layer is also responsible for reassembling the data packet at its destination. If there’s lots of internet traffic, the internet layer may take a little longer to send a file,
+ but there will be a smaller chance of an error corrupting that file.
+
+icon_03Layer 3: Transport Layer
+The transport layer provides a reliable data connection between two communicating devices. It’s like sending an insured package: 
+The transport layer divides the data in packets, acknowledges the packets it has received from the sender, and ensures that the recipient acknowledges the packets it receives.
+
+icon_04Layer 4: Application Layer
+The application layer is the group of applications that let the user access the network. For most of us that means email, messaging apps, a
+nd cloud storage programs. This is what the end-user sees and interacts with when sending and receiving data.
+
+
+
+A socket is one endpoint of a two-way communication link between two programs running on the network. 
+A socket is bound to a port number so that the TCP layer can identify the application that data is destined to be sent to. 
+An endpoint is a combination of an IP address and a port number.
+
+
+
+
+
+class X{
+    public:
+        X(int value): v(value){};
+        void print(std::ostream out){out <<v;}
+    private: 
+        int v;
+};
+    int main()
+    {
+        const X a(12);
+        a.print(std::cout);
+        std::cout<<std::end1;    
+           
+}
+
+#include <iostream>
+
+using namespace std;
+class p{
+    public: 
+       p() {}
+       void fun() {cout << "Hello World1" << endl; }
+};
+
+class c1:public p{
+    public: 
+       c1() {}
+       void fun() {cout << "Hello World2" << endl; }
+};
+class c2:public c1{
+    public: 
+       c2() {}
+       void fun() {cout << "Hello World3" << endl; }
+};
+
+
+int main()
+{
+    c2 C2;
+    p *P=&C2;
+  P->fun();
+   C2.fun();
+   return 0;
+}
+
+
+

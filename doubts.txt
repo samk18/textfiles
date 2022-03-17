@@ -1,0 +1,39 @@
+linux commands
+
+search a file in the directory 
+find . -name BUILD
+
+Search a file with all files containing .extension
+find / -type f -name "*.conf"
+
+
+amth.h
+signal.h
+
+
+
+load("@rules_cc//cc:defs.bzl", "cc_binary", "cc_library")
+
+cc_library(
+    name = "hello-greet",
+    srcs = ["hello-greet.cc"],
+    hdrs = ["hello-greet.h"],
+)
+
+cc_binary(
+    name = "hello-world",
+    srcs = ["hello-world.cc","hello-greet.cc"],
+  hdrs = ["hello-greet.h"]
+)
+
+
+
+MEDIUM] tools/bait/sw/hpp/src/hpp.cpp:201:11: Past-the-end iterator dereferenced [alpha.cplusplus.IteratorRange]
+          sysProc_p->second->parentPid = BHP_getSender(rec_p);
+          ^
+
+Found 1 defect(s) in hpp.cpp
+
+ find . -type f -name '*.cpp' -print0 | xargs -0 -n 1 sed -i 's/Ericsson/newword/g'
+
+

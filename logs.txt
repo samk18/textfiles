@@ -1,0 +1,321 @@
+INFO: Invocation ID: ca993f32-35b5-4b08-9fe2-cc221dfbe615
+INFO: Analyzed target //tools/bait/sw/eth/verif/unit:unittest (0 packages loaded, 0 targets configured).
+INFO: Found 1 target...
+Target //tools/bait/sw/eth/verif/unit:unittest up-to-date:
+  bazel-out/k8-dbg-ST-055664291a2c/bin/tools/bait/sw/eth/verif/unit/eth_btb.out
+INFO: Elapsed time: 6.527s, Critical Path: 6.34s
+INFO: 3 processes: 1 internal, 2 processwrapper-sandbox.
+INFO: Build completed successfully, 3 total actions
+INFO: Running command line: external/bazel_tools/tools/test/test-setup.sh tools/bait/sw/eth/verif/unit/baitINFO: Build completed successfully, 3 total actions
+exec ${PAGER:-/usr/bin/less} "$0" || exit 1
+Executing tests from //tools/bait/sw/eth/verif/unit:unittest
+-----------------------------------------------------------------------------
+Recreating BBIROOTs filetree...
+Running under : /repo/esimnaa/bazel_build_root/c86d3563a2246dc4a1333601d3d5d21b/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/sw/eth/verif/unit/bait_unit_test_runner_unittest.runfiles/bbi/tools/bait/sw/eth/verif/unit
+eth_btb.out trace_output=btb_result.txt trace:ETH_SEND:trace1=1 trace:ETH_SEND:trace2=1 trace:ETH_SEND:trace3=1 trace:ETH_SEND:trace4=1 trace:ETH_RECEIVE:trace1=1 trace:ETH_RECEIVE:trace2=1 trace:ETH_RECEIVE:trace3=1 target_arch=trinity snoop_hex=1 legacy_config=1
+Bait 64 bit test engine for BBI
+Invoked by esimnaa:eusers on seroiuvd04547 using GLIBC 2.17 and C++ version 201402 in directory /repo/esimnaa/bazel_build_root/c86d3563a2246dc4a1333601d3d5d21b/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/sw/eth/verif/unit/bait_unit_test_runner_unittest.runfiles/bbi/tools/bait/sw/eth/verif/unit
+Cmdline: eth_btb.out trace_output=btb_result.txt trace:ETH_SEND:trace1=1 trace:ETH_SEND:trace2=1 trace:ETH_SEND:trace3=1 trace:ETH_SEND:trace4=1 trace:ETH_RECEIVE:trace1=1 trace:ETH_RECEIVE:trace2=1 trace:ETH_RECEIVE:trace3=1 target_arch=trinity snoop_hex=1 legacy_config=1 
+Start time: 2022-01-25_08:38:23 at site: RO
+0-00:00:00.000 <main>:[DEFAULT]:[info]:Bait 64-bit use bbi git commit id as version
+0-00:00:00.000 <main>:[DEFAULT]:[info]:NOTE: Time stamp is simulated, not real time. (Set use_daytime=1 to get real time stamps)
+0-00:00:00.000 <eth_control>:[ETH_SEND]:[trgrp3]:Router commands registered.
+0-00:00:00.002 <main>:[CUNIT]:[info]:The testbench timeout value has newly been set as 294995 ms, which is 5000 ms less than the remaining time(299995 ms) to bazel timeout
+0-00:00:00.002 <main>:[CUNIT]:[info]:Suite routerCmdAsStr_Test starts ...
+0-00:00:00.003 <main>:[CUNIT]:[info]:  Test: routerCmdAsStrTest ...
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 0 as string: ETH_ROUTER_CMD_CPM_MAC
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 1 as string: ETH_ROUTER_CMD_CPM_VLAN
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 2 as string: ETH_ROUTER_CMD_PROTOCOL_VERSION
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 3 as string: ETH_ROUTER_CMD_EMCA_RESTART
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 4 as string: ETH_ROUTER_CMD_FILE_READY
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 5 as string: ETH_ROUTER_CMD_LOAD_FPGA
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 6 as string: ETH_ROUTER_CMD_CONFIG_PING
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 7 as string: ETH_ROUTER_CMD_PING
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 8 as string: ETH_ROUTER_CMD_PONG
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 200 as string: ETH_ROUTER_CMD_INCOMING_RESTART
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 9 as string: ETH_ROUTER_CMD_NAME_SERVER
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 13 as string: ETH_ROUTER_CMD_VERSION_INFO
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 15 as string: ETH_ROUTER_CMD_ENDPOINT_DATA
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command: 16 as string: ETH_ROUTER_CMD_BOARD_INFO
+0-00:00:00.003 <routerCmdAsStrTest>:[ETH_BTB]:[info]:Command 55 is UNKNOWN_COMMAND
+0-00:00:00.015 <main>:[CUNIT]:[info]:Test: routerCmdAsStrTest PASSED
+0-00:00:00.015 <main>:[CUNIT]:[info]:Suite routerCmdAsStr_Test has finished.
+0-00:00:00.015 <main>:[CUNIT]:[info]:Suite INIT_SUITE starts ...
+0-00:00:00.015 <main>:[CUNIT]:[info]:  Test: init ...
+0-00:00:00.015 <init>:[ETH_BTB]:[info]:Socket 0x000F successfully created.
+0-00:00:00.015 <init>:[ETH_BTB]:[info]:Socket 0x000F bound on port 43758
+0-00:00:00.015 <init>:[ETH_BTB]:[info]:Listening for connections on socket 0x000F ...
+0-00:00:00.015 <init>:[ETH_BTB]:[info]:Connection will start at 127.0.0.1:43758
+0-00:00:00.015 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012000 ETH_OPEN_REQ
+0-00:00:00.015 <eth_control>:[ETH_SEND]:[trgrp1]:Received connection request to 127.0.0.1.
+0-00:00:00.015 <eth_control>:[ETH_SEND]:[trgrp1]:ethInitSocket: Create socket
+0-00:00:00.015 <eth_control>:[ETH_SEND]:[trgrp1]:About to connect to ethRouter at 127.0.0.1:43758.
+0-00:00:00.016 <eth_control>:[ETH_SEND]:[info]:Socket (fd=17) connected to 127.0.0.1:43758.
+0-00:00:00.016 <eth_control>:[ETH_SEND]:[info]:ethInitSocket: Receiver created with PID: 0x10014.
+0-00:00:00.016 <eth_init_accept>:[ETH_BTB]:[info]:Got connection on socket 0x000F from 127.0.0.1, created socket 0x0010
+0-00:00:00.017 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Ready to receive from socket 0x0011
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_PROTOCOL_VERSION
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 0 command ETH_ROUTER_CMD_PROTOCOL_VERSION
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 32
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[info]:setRouterProtocolVer() Setting router supported protocol version: 1 -> 14.
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[trgrp3]:activeEmcas set to 00000000000000000000000000000100
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[trgrp3]:currentEmcaType set to 3
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[info]:Target connection SUCCESS. IP: 127.0.0.1.
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012096 ETH_CPM_ENDPOINT_DATA_FWD
+0-00:00:01.016 <eth_control>:[ETH_SEND]:[info]:ETH_CPM_ENDPOINT_DATA_FWD received too late.
+0-00:00:01.016 <init>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 3, ethIf 0, frameLength 0x0, sequence 0, cmd ETH_ROUTER_CMD_CPM_MAC
+0-00:00:01.016 <init>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 3, ethIf 0, frameLength 0x0, sequence 1, cmd ETH_ROUTER_CMD_CPM_VLAN
+0-00:00:01.023 <main>:[CUNIT]:[info]:Test: init PASSED
+0-00:00:01.023 <main>:[CUNIT]:[info]:  Test: disable_crc ...
+0-00:00:01.023 <disable_crc>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 0, emcaNo 103, ethIf 52, frameLength 0x3600, sequence 2, cmd UNKNOWN_COMMAND
+0-00:00:01.023 <disable_crc>:[ETH_BTB]:[info]:Frame header ethertype 0xc0eb, valn 0xae00081
+0-00:00:01.023 <disable_crc>:[ETH_BTB]:[info]:Destination MAC: 0x0 0x0 0x0 0x0 0x0 0x0
+0-00:00:01.023 <disable_crc>:[ETH_BTB]:[info]:Source MAC: 0x0 0x0 0xff 0xff 0x0 0x0
+0-00:00:01.023 <disable_crc>:[ETH_BTB]:[info]:Ebcom header, service type 0, header length 12084,
+0-00:00:01.024 <main>:[CUNIT]:[info]:Test: disable_crc PASSED
+0-00:00:01.024 <main>:[CUNIT]:[info]:Suite INIT_SUITE has finished.
+0-00:00:01.024 <main>:[CUNIT]:[info]:Suite ETH_getRouterProtocolVersion_Tests starts ...
+0-00:00:01.205 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 32
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x0, emcaNo = 3, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommand
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received router command ETH_ROUTER_CMD_CPM_MAC with extra payload size 0
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received ETH_ROUTER_CMD_CPM_MAC for emca: 3
+0-00:00:01.206 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 32
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x0, emcaNo = 3, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommand
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received router command ETH_ROUTER_CMD_CPM_VLAN with extra payload size 0
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received ETH_ROUTER_CMD_CPM_VLAN for emca: 3
+0-00:00:01.206 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 86
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x36, emcaNo = 103, ethIf = 52, type = 0, shouldHandleCRC = 0
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received frame Header, ethertype = 0xebc0, vlan = 0x8100e00a
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ebcom Header: Ebcom header length = 36, control = 5, prim = 4
+0-00:00:01.206 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Unexpected ebcom control: Ebcom header length = 36, control = 5, prim = 4
+0-00:00:01.524 <main>:[CUNIT]:[info]:  Test: testSuite1_test1 ...
+0-00:00:01.525 <testSuite1_test1>:[ETH_SEND]:[trgrp3]:_ETH_getRouterProtocolVersion() current protocol: 14
+0-00:00:01.526 <main>:[CUNIT]:[info]:Test: testSuite1_test1 PASSED
+0-00:00:01.526 <main>:[CUNIT]:[info]:  Test: testSuite1_checkPongReply ...
+0-00:00:01.526 <testSuite1_checkPongReply>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0x0, sequence 3, cmd ETH_ROUTER_CMD_PING
+0-00:00:01.716 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 32
+0-00:00:01.716 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x0, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:01.716 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommand
+0-00:00:01.716 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received router command ETH_ROUTER_CMD_PING with extra payload size 0
+0-00:00:01.716 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received router command ETH_ROUTER_CMD_PING
+0-00:00:01.716 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012095 ETH_PING_TARGET_FWD
+0-00:00:01.716 <eth_control>:[ETH_SEND]:[trgrp3]:eth_sender: Sending pong signal to target...
+0-00:00:01.716 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_PONG
+0-00:00:01.716 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 1 command ETH_ROUTER_CMD_PONG
+0-00:00:01.716 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 32
+0-00:00:01.716 <testSuite1_checkPongReply>:[ETH_BTB]:[info]:RECEIVED Router header: protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0, sequence 1, cmd ETH_ROUTER_CMD_PONG
+0-00:00:01.726 <main>:[CUNIT]:[info]:Test: testSuite1_checkPongReply PASSED
+0-00:00:01.726 <main>:[CUNIT]:[info]:  Test: testSuite1_checkVersionInfo_test ...
+0-00:00:01.727 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012106 ETH_RCS_VERSION_REQ
+0-00:00:01.727 <eth_control>:[ETH_SEND]:[trgrp3]:eth_control: Sending UP version information command to target...
+0-00:00:01.727 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_VERSION_INFO
+0-00:00:01.727 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 2 command ETH_ROUTER_CMD_VERSION_INFO
+0-00:00:01.727 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 32
+0-00:00:01.727 <testSuite1_checkVersionInfo_test>:[ETH_BTB]:[info]:RECEIVED Router header: protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0, sequence 2, cmd ETH_ROUTER_CMD_VERSION_INFO
+0-00:00:01.727 <testSuite1_checkVersionInfo_test>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0xd00, sequence 4, cmd ETH_ROUTER_CMD_VERSION_INFO
+0-00:00:01.918 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 45
+0-00:00:01.918 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0xd, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:01.918 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommandWithPayload
+0-00:00:01.918 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: Received router command ETH_ROUTER_CMD_VERSION_INFO
+0-00:00:01.918 <eth_receiver>:[ETH_RECEIVE]:[info]:eth_receive: UP version = TEST_VERSION
+0-00:00:02.732 <main>:[CUNIT]:[info]:Test: testSuite1_checkVersionInfo_test PASSED
+0-00:00:02.732 <main>:[CUNIT]:[info]:  Test: testSuite1_checkBoardInfo_test ...
+0-00:00:02.732 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012108 ETH_RCS_BOARD_REQ
+0-00:00:02.733 <eth_control>:[ETH_SEND]:[trgrp3]:eth_control: Sending board type information request to target...
+0-00:00:02.733 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_BOARD_INFO
+0-00:00:02.733 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 3 command ETH_ROUTER_CMD_BOARD_INFO
+0-00:00:02.733 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 32
+0-00:00:02.734 <testSuite1_checkBoardInfo_test>:[ETH_BTB]:[info]:RECEIVED Router header: protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0, sequence 3, cmd ETH_ROUTER_CMD_BOARD_INFO
+0-00:00:02.734 <testSuite1_checkBoardInfo_test>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0xb00, sequence 5, cmd ETH_ROUTER_CMD_BOARD_INFO
+0-00:00:02.921 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 43
+0-00:00:02.921 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0xb, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:02.921 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommandWithPayload
+0-00:00:02.921 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: Received router command ETH_ROUTER_CMD_BOARD_INFO payload length 10
+0-00:00:43.736 <main>:[CUNIT]:[info]:Test: testSuite1_checkBoardInfo_test PASSED
+0-00:00:43.736 <main>:[CUNIT]:[info]:  Test: testSuite1_incomingTargetRestart ...
+0-00:00:43.736 <testSuite1_incomingTargetRestart>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0x0, sequence 6, cmd ETH_ROUTER_CMD_INCOMING_RESTART
+0-00:00:43.933 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 32
+0-00:00:43.933 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x0, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:43.933 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommand
+0-00:00:43.933 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received router command ETH_ROUTER_CMD_INCOMING_RESTART with extra payload size 0
+0-00:00:43.933 <eth_receiver>:[ETH_RECEIVE]:[info]:received router command ETH_ROUTER_CMD_INCOMING_RESTART, failed to create bait router
+0-00:00:44.746 <main>:[CUNIT]:[info]:Test: testSuite1_incomingTargetRestart PASSED
+0-00:00:44.746 <main>:[CUNIT]:[info]:  Test: testSuite1_startItcGw ...
+0-00:00:44.746 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10018001 ITCGW_START_REQ
+0-00:00:44.746 <eth_control>:[ETH_SEND]:[info]:ITCGW_START_REQ received.
+0-00:00:44.746 <eth_control>:[ETH_SEND]:[info]:publicPort: 2755, broadcastPort: 2756, interfaceName: 'eth0', gatewayName: 'itcgw_proc'
+0-00:00:44.746 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_START_ITC_GW
+0-00:00:44.746 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 4 command ETH_ROUTER_CMD_START_ITC_GW
+0-00:00:44.746 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 48
+0-00:00:44.757 <main>:[CUNIT]:[info]:Test: testSuite1_startItcGw PASSED
+0-00:00:44.757 <main>:[CUNIT]:[info]:  Test: testSuite1_stopItcGw ...
+0-00:00:44.757 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10018004 ITCGW_STOP_REQ
+0-00:00:44.757 <eth_control>:[ETH_SEND]:[info]:ITCGW_STOP_REQ received.
+0-00:00:44.758 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_STOP_ITC_GW
+0-00:00:44.758 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 5 command ETH_ROUTER_CMD_STOP_ITC_GW
+0-00:00:44.758 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 32
+0-00:00:44.758 <main>:[CUNIT]:[info]:Test: testSuite1_stopItcGw PASSED
+0-00:00:44.758 <main>:[CUNIT]:[info]:  Test: testSuite1_routeItcGwEnabled ...
+0-00:00:44.758 <testSuite1_routeItcGwEnabled>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0xe00, sequence 7, cmd ETH_ROUTER_CMD_START_ITC_GW
+0-00:00:44.952 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 46
+0-00:00:44.952 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0xe, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:44.953 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommandWithPayload
+0-00:00:44.953 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:Received router command ETH_ROUTER_CMD_START_ITC_GW
+0-00:00:44.953 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:exitCode = 0, result = 'Result payload'
+0-00:00:45.761 <main>:[CUNIT]:[info]:Test: testSuite1_routeItcGwEnabled PASSED
+0-00:00:45.761 <main>:[CUNIT]:[info]:  Test: testSuite1_routeItcGwDisabled ...
+0-00:00:45.761 <testSuite1_routeItcGwDisabled>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0x0, sequence 8, cmd ETH_ROUTER_CMD_STOP_ITC_GW
+0-00:00:45.957 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 32
+0-00:00:45.958 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x0, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:45.958 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommand
+0-00:00:45.958 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: received router command ETH_ROUTER_CMD_STOP_ITC_GW with extra payload size 0
+0-00:00:45.958 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:Received router command ETH_ROUTER_CMD_STOP_ITC_GW
+0-00:00:45.964 <main>:[CUNIT]:[info]:Test: testSuite1_routeItcGwDisabled PASSED
+0-00:00:45.964 <main>:[CUNIT]:[info]:  Test: testSuite1_updateFaultyDsps ...
+0-00:00:45.964 <testSuite1_updateFaultyDsps>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0x1a06, sequence 9, cmd ETH_ROUTER_CMD_FAULTY_DSPS
+0-00:00:46.159 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 1594
+0-00:00:46.159 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x61a, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:46.160 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommandWithPayload
+0-00:00:46.160 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x1001210a ETH_FAULTY_DSPS_FWD
+0-00:00:46.160 <eth_control>:[ETH_SEND]:[error]:eth_control: Unexpected signal: 1001210a
+0-00:00:46.969 <main>:[CUNIT]:[info]:Test: testSuite1_updateFaultyDsps PASSED
+0-00:00:46.969 <main>:[CUNIT]:[info]:  Test: testSuite1_updateCpmMacAndVlan ...
+0-00:00:46.969 <testSuite1_updateCpmMacAndVlan>:[ETH_BTB]:[info]:Router header, protocolVersion 14 ,type 1, emcaNo 0, ethIf 0, frameLength 0xed01, sequence 10, cmd ETH_ROUTER_CMD_ENDPOINT_DATA
+0-00:00:47.163 <eth_receiver>:[ETH_SEND]:[trgrp4]:snoop PDU I len 525
+0-00:00:47.163 <eth_receiver>:[ETH_RECEIVE]:[trgrp1]:eth_receive: Received ethernet Header, protocolVersion 14, frameLength = 0x1ed, emcaNo = 0, ethIf = 0, type = 1, shouldHandleCRC = 0
+0-00:00:47.164 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: enter  handleRouterCommandWithPayload
+0-00:00:47.164 <eth_receiver>:[ETH_RECEIVE]:[trgrp3]:eth_receive: Received router command ETH_ROUTER_CMD_ENDPOINT_DATA
+0-00:00:47.164 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012096 ETH_CPM_ENDPOINT_DATA_FWD
+0-00:00:47.164 <eth_control>:[ETH_SEND]:[info]:ETH_CPM_ENDPOINT_DATA_FWD received too late.
+0-00:00:47.980 <main>:[CUNIT]:[info]:Test: testSuite1_updateCpmMacAndVlan PASSED
+0-00:00:47.980 <main>:[CUNIT]:[info]:  Test: testSuite1_FpgaVersionReqS ...
+0-00:00:47.980 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012107 ETH_ROUTER_CMD_FPGA_INFO_REQ_FW
+0-00:00:47.980 <eth_control>:[ETH_SEND]:[trgrp3]:eth_control: Sending ETH_ROUTER_CMD_FPGA_INFO_REQ to rcsAgent...
+0-00:00:47.980 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: Router command ETH_ROUTER_CMD_FPGA_INFO_REQ
+0-00:00:47.980 <eth_control>:[ETH_SEND]:[trgrp3]:ethSendRouterCommand: version 14 type 1 seqNr 6 command ETH_ROUTER_CMD_FPGA_INFO_REQ
+0-00:00:47.980 <eth_control>:[ETH_SEND]:[trgrp4]:snoop PDU O len 32
+0-00:00:47.981 <main>:[CUNIT]:[info]:Test: testSuite1_FpgaVersionReqS PASSED
+0-00:00:47.981 <main>:[CUNIT]:[info]:  Test: testSuite1_getEmcaMacAddrAndEmcaVlanId ...
+0-00:00:47.993 <main>:[CUNIT]:[info]:Test: testSuite1_getEmcaMacAddrAndEmcaVlanId PASSED
+0-00:00:47.993 <main>:[CUNIT]:[info]:Suite ETH_getRouterProtocolVersion_Tests has finished.
+0-00:00:47.993 <main>:[CUNIT]:[info]:Suite ETH_regReceiver_Tests starts ...
+0-00:00:48.493 <main>:[CUNIT]:[info]:  Test: testSuite2_test1 ...
+0-00:00:48.494 <testSuite2_test1>:[ETH_BTB]:[info]:Stub created with PID 0x0001001c
+0-00:00:48.494 <eth_client>:[ETH_SEND]:[trgrp1]:ETH_regReceiver:service request = 3
+0-00:00:48.494 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012023 ETH_REG_RECEIVER_REQ
+0-00:00:48.494 <eth_control>:[ETH_SEND]:[error]:[ETH] Requested service is not available, service = 3
+0-00:00:48.494 <eth_client>:[ETH_SEND]:[trgrp1]:Requested service return value = 1
+0-00:00:48.494 <eth_client>:[ETH_BTB]:[info]:Received signal = 1
+0-00:00:48.996 <main>:[CUNIT]:[info]:Test: testSuite2_test1 PASSED
+0-00:00:48.996 <main>:[CUNIT]:[info]:  Test: testSuite2_test2 ...
+0-00:00:48.996 <testSuite2_test2>:[ETH_BTB]:[info]:Stub created with PID 0x0001001e
+0-00:00:48.997 <eth_client>:[ETH_SEND]:[trgrp1]:ETH_regReceiver:service request = 0
+0-00:00:48.997 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012023 ETH_REG_RECEIVER_REQ
+0-00:00:48.998 <eth_client>:[ETH_SEND]:[trgrp1]:Requested service return value = 0
+0-00:00:48.998 <eth_client>:[ETH_BTB]:[info]:Received signal = 0
+0-00:00:49.496 <main>:[CUNIT]:[info]:Test: testSuite2_test2 PASSED
+0-00:00:49.496 <main>:[CUNIT]:[info]:  Test: testSuite2_test3 ...
+0-00:00:49.497 <eth_client>:[ETH_SEND]:[trgrp1]:ETH_regReceiver:service request = 1
+0-00:00:49.497 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012023 ETH_REG_RECEIVER_REQ
+0-00:00:49.497 <eth_client>:[ETH_SEND]:[trgrp1]:Requested service return value = 0
+0-00:00:49.497 <eth_client>:[ETH_BTB]:[info]:Received signal = 0
+0-00:00:49.498 <testSuite2_test3>:[ETH_BTB]:[info]:Stub created with PID 0x00010020
+0-00:00:49.998 <main>:[CUNIT]:[info]:Test: testSuite2_test3 PASSED
+0-00:00:49.998 <main>:[CUNIT]:[info]:  Test: testSuite2_test4 ...
+0-00:00:49.999 <eth_client>:[ETH_SEND]:[trgrp1]:ETH_regReceiver:service request = 2
+0-00:00:49.999 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012023 ETH_REG_RECEIVER_REQ
+0-00:00:49.999 <eth_client>:[ETH_SEND]:[trgrp1]:Requested service return value = 0
+0-00:00:49.999 <eth_client>:[ETH_BTB]:[info]:Received signal = 0
+0-00:00:50.000 <testSuite2_test4>:[ETH_BTB]:[info]:Stub created with PID 0x00010022
+0-00:00:50.506 <main>:[CUNIT]:[info]:Test: testSuite2_test4 PASSED
+0-00:00:50.506 <main>:[CUNIT]:[info]:Suite ETH_regReceiver_Tests has finished.
+0-00:00:50.506 <main>:[CUNIT]:[info]:Suite ETH_gettes&setters_Tests starts ...
+0-00:00:51.006 <main>:[CUNIT]:[info]:  Test: testSuite3_test1 ...
+0-00:00:51.007 <testSuite3_test1>:[ETH_BTB]:[info]:Stub created with PID 0x00030011
+0-00:00:51.008 <eth_client>:[ETH_BTB]:[info]:CPM VLAN ID for DEV 2 has been set to 10
+0-00:00:51.009 <testSuite3_test1>:[ETH_BTB]:[info]:Stub created with PID 0x0002001a
+0-00:00:51.011 <eth_client>:[ETH_BTB]:[info]:CPM VLAN ID for DEV 2 has been returned as: 10
+0-00:00:51.017 <main>:[CUNIT]:[info]:Test: testSuite3_test1 PASSED
+0-00:00:51.018 <main>:[CUNIT]:[info]:  Test: testSuite3_test2 ...
+0-00:00:51.020 <testSuite3_test2>:[ETH_BTB]:[info]:Stub created with PID 0x00010024
+0-00:00:51.021 <eth_client>:[ETH_BTB]:[info]:CPM MAC address for DEV 2 has been set to: 0x01 : 0x02 : 0x03 : 0x04 : 0x05 : 0x06
+0-00:00:51.022 <testSuite3_test2>:[ETH_BTB]:[info]:Stub created with PID 0x00010025
+0-00:00:51.027 <eth_client>:[ETH_BTB]:[info]:CPM MAC address for DEV 2 has been returned as: 0x01 : 0x02 : 0x03 : 0x04 : 0x05 : 0x06
+0-00:00:51.041 <main>:[CUNIT]:[info]:Test: testSuite3_test2 PASSED
+0-00:00:51.041 <main>:[CUNIT]:[info]:Suite ETH_gettes&setters_Tests has finished.
+0-00:00:51.041 <main>:[CUNIT]:[info]:Suite BHP_ebcomDAW/UsrDefHdr_Tests starts ...
+0-00:00:51.542 <main>:[CUNIT]:[info]:  Test: testSuite5_test1 ...
+0-00:00:51.543 <testSuite5_test1>:[ETH_BTB]:[info]:Stub created with PID 0x00010028
+0-00:00:51.544 <eth_client>:[ETH_SEND]:[trgrp1]:BHP_ebcomDAWUserDefinedHdr to snid 0x2, addr 0x33aabbccdd using IE_LPORT_EMCA_2A
+0-00:00:51.544 <eth_control>:[ETH_SEND]:[trgrp2]:eth_control: received a signal: 0x10012013 ETH_SEND_EBCOM_FWD
+0-00:00:51.544 <eth_control>:[ETH_SEND]:[trgrp3]:eth_control: Resend ETH_SEND_EBCOM_FWD.
+0-00:00:51.544 <eth_sender>:[ETH_SEND]:[trgrp2]:eth_sender: received a signal: 0x10012013
+0-00:04:44.007 <testSuite5_test1>:[ETH_BTB]:[info]:RECEIVED Router header: protocolVersion 176 ,type 173, emcaNo 103, ethIf 52, frameLength 32702, sequence 0, cmd UNKNOWN_COMMAND
+0-00:04:44.012 <main>:[CUNIT]:[error]:Testbench timeout reached in test:BHP_ebcomDAW/UsrDefHdr_Tests:testSuite5_test1! Testbench abort
+0-00:04:44.012 <main>:[CUNIT]:[error]:Test: testSuite5_test1 FAILED:
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1625: error: CU_ASSERT_EQUAL(ntohs(routerHeader.frameLength),frameLength)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1626: error: CU_ASSERT_EQUAL(routerHeader.version,ETH_PROTOCOL_VERSION)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1627: error: CU_ASSERT_EQUAL(routerHeader.type,BBI_EQMH_EMCA_ETH_ROUTER_TYPE_RAW)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1628: error: CU_ASSERT_EQUAL(routerHeader.routerData.command.cmd,0)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1631: error: CU_ASSERT_EQUAL(ethHeader.etherType,bbiEqmhEmca_ethHeader_t::ETHER_TYPE_EBCOM)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1632: error: CU_ASSERT_EQUAL(ethHeader.vlan.tpid,bbiEqmhEmca_ethHeader_t::EMCA_VLAN_TPID)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1633: error: CU_ASSERT_EQUAL(ethHeader.vlan.pcp,bbiEqmhEmca_ethHeader_t::EMCA_VLAN_PCP)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1635: error: CU_ASSERT_EQUAL(ethHeader.vlan.vid,BTB_CPM_VLAN_ID_10)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1638: error: CU_ASSERT_EQUAL(ebcomHeader.header.revision,BTB_DAW_REVISION_B)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1639: error: CU_ASSERT_EQUAL(ebcomHeader.header.primType,bbiEqmhEmca_ebComHeader::PRIM_TYPE_2)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1640: error: CU_ASSERT_EQUAL(ebcomHeader.header.control,bbiEqmhEmca_ebComHeader::SERVICE_TYPE_DAW)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1641: error: CU_ASSERT_EQUAL(ebcomHeader.header.length,sizeof(bbiEqmhEmca_ebComHeader_t) + BTB_DATA_LEN_200)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1642: error: CU_ASSERT_EQUAL(ebcomHeader.header.serviceHdr.DAW.destAddrHigh,BTB_HIGH_ADDRESS_00000033)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1643: error: CU_ASSERT_EQUAL(ebcomHeader.header.serviceHdr.DAW.destAddrLow,BTB_LOW__ADDRESS_AABBCCDD)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1644: error: CU_ASSERT_EQUAL(ebcomHeader.header.serviceHdr.DAW.sequence,BTB_DAW_SEQUENCE)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1645: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.control,BTB_PRIM_DAW_CONTROL_CC)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1646: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.xcepDest,BTB_PRIM_DAW_XCEPDEST)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1647: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.qidx,BTB_PRIM_QIDX_4)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1648: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.sigNo,BTB_PRIM_DAW_SIGNO_7788)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1649: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.traceMask,BTB_PRIM_DAW_TRACEMASK_33)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1650: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.genPurpose1,BTB_PRIM_DAW_GPURPOSE1)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1651: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.reserved2,BTB_PRIM_DAW_RESERVED2)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1652: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.reserved3,BTB_PRIM_DAW_RESERVED3)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1653: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.genPurpose2,BTB_PRIM_DAW_GPURPOSE2)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1654: error: CU_ASSERT_EQUAL(ebcomHeader.header.primHeader.DAW.genPurpose3,BTB_PRIM_DAW_GPURPOSE3)
+  tools/bait/sw/eth/verif/unit/src/eth_btb.cpp:1656: error: bstrcmp(receiveBString(BTB_DATA_LEN_200), btb_bstring) == 0
+  tools/bait/sw/cunit/src/TestRun.cpp:1985: error: CU_FAIL("Test timeout!")
+0-00:04:44.012 <main>:[CUNIT]:[info]:Suite BHP_ebcomDAW/UsrDefHdr_Tests has finished.
+0-00:04:44.012 <main>:[DEFAULT]:[info]:HPP_setExitResult(0)
+0-00:04:44.013 <HPP_main>:[DEFAULT]:[info]:Process main(65536) called BHP_exit
+0-00:04:44.013 <HPP_main>:[DEFAULT]:[info]:HPP shutdown...
+0-00:04:44.062 <HPP_main>:[DEFAULT]:[info]:Simulated time ratio 0.96
+0-00:04:44.062 <HPP_main>:[DEFAULT]:[info]:HPP: Calling cleanup function CLI: cliCleanup with prio 3
+0-00:04:44.063 <HPP_main>:[DEFAULT]:[info]:HPP: Calling cleanup function ETH: closeEthConnection with prio 11
+0-00:04:44.065 <HPP_main>:[ETH_SEND]:[info]:Closing socket connection with target. Receiver pid: 0x10014.
+0-00:04:44.065 <HPP_main>:[ETH_SEND]:[trgrp2]:cmList=> 
+0-00:04:44.066 <eth_receiver>:[ETH_RECEIVE]:[info]:eth_receive: Target, has performed an orderly shutdown, recv returned 0
+0-00:04:44.066 <eth_receiver>:[ETH_RECEIVE]:[info]:eth_receive() Process exits. (0x10014)
+0-00:04:44.067 <HPP_main>:[ETH_SEND]:[info]:setRouterProtocolVer() Setting router supported protocol version: 14 -> 1.
+0-00:04:44.067 <HPP_main>:[DEFAULT]:[info]:HPP: Calling cleanup function EVENT: EVENT_reset with prio 13
+0-00:04:44.067 <HPP_main>:[DEFAULT]:[info]:HPP: Calling cleanup function TRACE: cleanupTrace with prio 15
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:
+Run Summary:    Type  Total    Ran Passed Failed Inactive
+              suites     18      6    n/a      0        0
+               tests     62     23     22      1        0
+             asserts    144    144    117     27      n/a
+
+Elapsed time =  297.149 seconds
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:
+---- for atest -----
+Test result: 22 of 23 passed
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:CU_get_error_msg = Testbench exceeded the specified timeout
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:CU_get_number_of_tests_failed() = 1
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:CU_get_number_of_suites_failed() = 0
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:CU_get_testbench_init_clean_failed() = false
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:_CUNIT_numRegisteredFailures = 1
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:HPP_setExitResult(1)
+0-00:04:44.069 <HPP_main>:[DEFAULT]:[info]:
+
+Testbench result: FAILED
+
+0-00:04:44.181 <HPP_main>:[DEFAULT]:[info]:BHP exit with result=1
+0-00:04:44.181 <HPP_main>:[DEFAULT]:[info]:Collecting logs into baitlogs.tar.gz
+0-00:04:44.181 <HPP_main>:[DEFAULT]:[info]:Finished collecting logs

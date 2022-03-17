@@ -1,0 +1,22 @@
+  int r = 0;
+  for (auto v : {all ...}) {
+         cout << v ;
+    r += v;
+  }
+  return r
+Args ...args)
+
+  va_list ap;
+  va_start(ap, numParam);
+  for(U32 i = 0; i < numParam; i++)
+  {
+    info->paramTypes.push_back(
+      (CLI_coliReturnTypesE)va_arg(ap, CLI_coliParamTypesE));
+  }
+  va_end(ap);
+
+
+for (auto v : {all ...}) {
+         cout << v ;
+    r += v;
+  }

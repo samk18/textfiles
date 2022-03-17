@@ -1,0 +1,26 @@
+Debug the test bench using host as target.
+```
+> cd <BBI_ROOT>/tools/bait/verif/minTemplate
+> gmake -B build_lynx_svp
+> emacs flex/testSuite1/src/helloWorldBait.c &
+> gmake debug_lynx_svp
+> (gdb) run
+
+
+ Amiralsgatan 28, 211 55 Malmö
+
+Okay, is it possible to show us the room first and then we pay immediately right after the room is shown to us? Since you know the agents of Airbnb it will be easier for you to tell them that 
+we are interested to see and move in to the apartment. Since I am new and not familiar with this Airbnb.I hope you understand my situation.
+
+Valgrind doesn't seem to work in Bazel test
+
+
+I am currently working on the ticket which is Valgrind doesn't seem to produce logs in the Bazel test and
+ have fixed most of the things suggested by Marcus and Leif and am about to complete the task. 
+
+What:  Removed unnecessary parameters of Valgrind flags if Valgrind
+       flag is specified and equal symbol after --valgrind when
+       running Bait with valgind at the command line using Bazel.
+Why:   To run bait with valgring using Bazel, No point in having
+       these paramters after --Valgrind flag.
+Where: In the tools/bait/bin/bait_wrapper.py

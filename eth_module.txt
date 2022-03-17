@@ -1,0 +1,137 @@
+
+
+
+884 hpp/gen/process(eth_receive)   eth_receiver.cpp
+
+
+around 2702 bhp_process(eth_control)
+
+
+aroud 2628 bhp_process(eth_sender)
+
+
+ /* RingbusMailParams  mail;
+ memset(&mail, 0, sizeof(mail));
+ mail.snid=2;
+ send_ringbus_mail_g3(&mail); */
+
+//CU_ASSERT_EQUAL(, BHP_OK);
+ //CU_ASSERT_EQUAL(send_ringbus_mail(NULL), BHP_OK);
+ //config.selectPorduct("trinity
+
+
+
+
+**************************************************************************
+
+typedef struct FaultyDspInfoS
+{
+  uint16_t emcaId;
+  uint16_t noDsps;
+  uint16_t dsps[MAX_NO_FAULTY_DSPS];
+} FaultyDspInfoS;
+
+typedef struct FaultyBBMInfoS
+{
+  uint16_t noEmca;
+  FaultyDspInfoS data[MAX_NO_BBMS];
+} FaultyBBMInfoS;
+
+***************************************************************************
+
+typedef struct Port
+{
+  uint32_t emca;
+  uint32_t vlan;
+  unsigned char mac[6];
+} Port;
+
+typedef std::map<std::string, Port> PortInfo;
+
+****************************************************************************
+
+PortInfo lynxPorts = {
+  {"IE_LPORT_CPU_BBI_LOAD_1", {.emca = 0, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x00, 0x00, 0x06}}},
+  {"IE_LPORT_CPU_BBI_LOAD_2", {.emca = 0, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x00, 0x00, 0x07}}},
+  {"IE_LPORT_CPU_BBI_LOAD_3", {.emca = 0, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x00, 0x00, 0x08}}},
+  {"IE_LPORT_CPU_BBI_LOAD_4", {.emca = 0, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x00, 0x00, 0x09}}},
+
+  {"IE_LPORT_ICM0_CONFIG", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x80, 0x0d, 0x00, 0x01}}},
+  {"IE_LPORT_ICM1_CONFIG", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x80, 0x15, 0x00, 0x01}}},
+  {"IE_LPORT_ICM2_CONFIG", {.emca = 3, .vlan = 0, .mac = {0x02, 0x00, 0x80, 0x1d, 0x00, 0x01}}},
+  {"IE_LPORT_ICM3_CONFIG", {.emca = 4, .vlan = 0, .mac = {0x02, 0x00, 0x80, 0x25, 0x00, 0x01}}},
+
+  {"IE_LPORT_EMCA_1A", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x0b, 0x00, 0x02}}},
+  {"IE_LPORT_EMCA_1B", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x0c, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_1C", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x0d, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_1D", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x0e, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_1E", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x0f, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_1F", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x10, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_1G", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x11, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_1H", {.emca = 1, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x12, 0x00, 0x01}}},
+
+  {"IE_LPORT_EMCA_2A", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x1b, 0x00, 0x02}}},
+  {"IE_LPORT_EMCA_2B", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x1c, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_2C", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x1d, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_2D", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x1e, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_2E", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x1f, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_2F", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x20, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_2G", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x21, 0x00, 0x01}}},
+  {"IE_LPORT_EMCA_2H", {.emca = 2, .vlan = 0, .mac = {0x02, 0x00, 0x01, 0x22, 0x00, 0x01}}},
+
+
+
+)))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))
+
+How do you ask for feedback from colleagues examples?
+Image result for how to ask for private feedback from colleagues example
+I'm looking to enhance my performance at work, I'd really appreciate it if you'd be willing to give me some honest and open feedback on some of the work I do, is that possible? If your coworker seems open to providing feedback, go on to explain: I'll always let you know in advance what I'm hoping to get feedback on.
+
+
+Hi Leif,
+
+
+
+coming to code walk through meeting, I didn't have much time to prepare for it and meeting was scheduled unexpectedly initially i planned to arrange the meeting on Tuesday but due to new thesis students are joining on Monday and most of us will be busy, I have scheduled on Friday. I will keep this in mind for next meetings and be prepared.
+
+
+
+
+
+
+
+
+Hi Marcus, as per what you mentioned in the call about that
+
+I agree with that but I think,
+
+(I)coming to the code walkthrough meeting, As you know that I didn't have much time to prepare for it and the meeting was scheduled unexpectedly initially I planned to arrange the meeting on Tuesday but due to new thesis students are joining on Monday and most of us will be busy, I have scheduled on Friday and didn't have time for it and came to the meeting without a proper plan. I will keep this in mind for the next meetings and be prepared.
+
+
+
+Regarding code context.
+
+(II)Definitely. I already try understanding the context that a method fits into. I probably need to broaden the context but this would definitely take a lot of time given the code base is humongous & which I thought would not allow us to meet our goals in the stipulated time. So, I tried narrowing the context a bit & learn the broader context as I code in other classes & modules. Let me know your suggestions here.
+
+
+Thanks for your mail, I just saw that the discussion meeting has been set to Friday this week. But I have some other work that needs my presence this week Friday. Sorry for not being able to have our discussion on Friday.
+
+And you also mentioned it's okay for you after Tuesday next week to have to meeting in our previous conversation. 
+
+I can have the meeting any day next week starting from August 2nd. 
+
+Please confirm me the timings and the day that is okay to you 😀 !
+
+
+
+
+
+
+
+
+Regarding wfh furniture, I am planning to get the chair from the office. Can you tell me which exit should I prefer to use to take the chair and  let me know if there is any specific chair that is assigned for wfh?
+explain about the team's vision & projects. 
+
+
+
+

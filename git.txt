@@ -1,0 +1,448 @@
+;Git 
+
+To show list of files in commit area
+git show e39541c42f833eeeedeedda60cd3e8a627294d5f(commit-id) --name-only 
+
+ Undo the last commit with git reset --soft HEAD~1, move the mistakenly committed files back to the staging area.
+git reset --soft HEAD~1
+
+update the current working branch
+git pull origin master --rebase
+
+how to unstage a file which is in staging area
+git rm --cached filename
+
+see changes that are made to file
+git diff --cached
+git diff --staged
+
+see particular file which are in staging area
+git diff --cached ../mtd/src/mtd_init.cpp(file name)
+
+see both file changes that are in staged and unstaged in git
+git status -vv
+
+
+only look at trackedfile
+git status -uno
+
+
+delete all untracked files
+git clean -xfd
+
+
+gtags 
+module add global/6.6.4
+gtags -iq
+global -dt HPP_printf
+
+gdb commands
+f shows you where are you
+l shows few lines of code 
+
+
+
+both are diverged
+git reset --hard origin/master
+git rebase origin/master
+
+push to gerrit
+git push origin HEAD:refs/for/master
+
+when there is merge conflict
+solve merge conflicts
+then do git add 
+after git rebase --continue
+
+
+ETH_ROUTER_CMD_START_ITC_GW
+
+
+
+
+
+Kill process
+kill -9 <pid>
+
+merge 2 commits into one
+git rebase -i HEAD~2
+
+Running make file
+make build_bazel_trinity_svp
+bait config_bazel_SVP_trinity.bait automode=0 --debug=host
+
+important things to know
+calls from hpp_constructor.cpp to bait
+
+C:\Program Files (x86)\SFTP Net Drive\
+
+
+Number of files in git status
+git status | grep 'modified:' | wc -l
+
+
+hellowowrld with bazel
+tools/bait/verif/bazel_test_example
+
+
+
+
+  ((( ( ( {pass_on_fail} {test_tool} {parameters} $EXTRA_PARAMETERS) | tee output.txt && (on_post || true) )|| (on_post && false) ) && [[ $PIPESTATUS == 0 ]]) || (on_test_fail && false))
+
+
+helloworld using make
+tools/bait/verif/minTemplate/
+ls
+BUILD host .....
+ ssh -i ~/.ssh/ssh esimnaa@100.78.42.79
+
+codechecker
+tools/bait/component/bhp:codechecker_bait
+
+
+bazellogs
+bazel-testlogs/tools/bait/bazel-test-example/
+
+
+search strings in cpp files under tools/bait
+./tools/bait/**/*.cpp
+
+search strings in header files under tools/bait
+./tools/bait/**/*.h
+
+
+bazeltestlogs
+
+
+CLI_coliParamTypesE x={ all... };
+
+ for (auto v : { all... }) {
+   info->paramTypes.push_back(
+      (CLI_coliReturnTypesE)v);
+  }
+  va_list ap;
+  va_start(ap, numParam);
+  for(U32 i = 0; i < numParam; i++)
+  {
+    info->paramTypes.push_back(
+      (CLI_coliReturnTypesE)va_arg(ap, CLI_coliParamTypesE));
+  }
+  va_end(ap);
+
+
+void simple_printf(const char* fmt, ...)
+{
+    va_list args;
+    va_start(args, fmt);
+ 
+    while (*fmt != '\0') {
+        if (*fmt == 'd') {
+            int i = va_arg(args, int);
+            printf("%d\n", i);
+        } else if (*fmt == 'c') {
+            // A 'char' variable will be promoted to 'int'
+            // A character literal in C is already 'int' by itself
+            int c = va_arg(args, int);
+            printf("%c\n", c);
+        } else if (*fmt == 'f') {
+            double d = va_arg(args, double);
+            printf("%f\n", d);
+        }
+        ++fmt;
+    }
+ 
+    va_end(args);
+}
+ 
+int main(void)
+{
+    simple_printf("dcff", 3, 'a', 1.999, 42.5); 
+
+
+
+
+template <typename T, typename... Ts>
+CLI_coliResultE CLI_registerCommand(const char* command,
+                                    const U32 commandId,
+                                    const char* helpString,
+                                    const CLI_coliCommandCallbackFP callBack_p,
+                                    const SIGSELECT commandSigNo,
+                                    const U32 cmdPid,
+                                    const CLI_coliSynchModeE synchMode,
+                                    const CLI_coliReturnTypesE returnType,
+                                    const T numParam,
+                                    Ts... all)
+{
+  std::lock_guard<std::mutex> guard(coliMapMutex);
+  if(coliMap.find(command) != coliMap.end())
+  {
+    HPP_printf("There already a command name '%s' registered!",
+               command);
+    return CLI_COLI_FAIL;
+  }
+
+  BHP_assert(numParam <= CLI_COLI_MAX_NUMBER_PARAMETERS);
+  BHP_assert(!((callBack_p == NULL) && (commandSigNo == 0)));
+  BHP_assert(!((callBack_p != NULL) && (commandSigNo != 0)));
+  BHP_assert(strlen(command) <= CLI_COLI_MAX_COMMAND_LENGTH);
+
+  auto info = std::make_unique<CmdInfo>();
+  info->name = command;
+  info->help = helpString;
+  info->signo = commandSigNo;
+  info->id = commandId;
+  info->pid = cmdPid;
+  info->noParams = numParam;
+  info->cb = callBack_p;
+  info->mode = synchMode;
+  info->returnType = returnType;
+ 
+
+  coliMap[command] = std::move(info);
+
+  return CLI_COLI_OK;
+}
+/////////////////////////77	
+template<class ... Types>
+int add(int i, int j, Types... all) {
+  
+  
+100.78.42.79/
+ ssh -i ~/.ssh/ssh esimnaa@100.78.42.79 
+Hi Marcus, I have pushed new patch set for the same one and it is failed and then started going through all the links and have come across this link (https://fem1s10-eiffel176.eiffel.gic.ericsson.se:8443/jenkins/job/release-track-cl1-test-run-main/18076/label=RHEL7_BBI_CI,test=tad_baitDC_Svp/console) in w
+hich "_BBI_CI,tad_baitDC_Svp" test was failed.
+
+
+
+
+[LOW] /repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/tools/bait/sw/cli/src/cli.cpp:426:17: do not define a C-style variadic function; consider using a function parameter pack or currying instead [cert-dcl50-cpp]
+CLI_coliResultE CLI_registerCommand(const char* command,
+
+
+
+
+
+
+
+
+
+Namespace(debug=None, debug_emca_params=u'', debug_host_params=u'', 
+valgrind='config_filename=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/verif/bazel_test_example/host/test_config.yaml')
+
+
+config_filename=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/
+k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/verif/bazel_test_example/host/test_config.yaml target_pf=svp
+
+
+
+
+
+
+Namespace(debug=None, debug_emca_params=u'', debug_host_params=u'', valgrind='config_filename=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/verif/bazel_test_example/host/test_config.yaml')
+['target_arch=trinity', 'target_pf=svp']
+
+
+
+
+['valgrind', '--leak-check=full', '--error-exi
+
+
+
+
+tcode=1', '--track-origins=yes', '--log-file=valgrind_result.log', '--suppressions=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/bin/external/valgrind_dir/bait.supp', '--suppressions=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/bin/external/valgrind_dir/bbiCbbHost.supp', '--suppressions=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/bin/external/valgrind_dir/valgrind-python3.supp', 'bait', 'target_arch=trinity', '--valgrind=', 'config_filename=/repo/esimnaa/bazel_build_root/1e657e24b3a7297329f5fb3a74b64c40/execroot/bbi/bazel-out/k8-fastbuild/bin/tools/bait/verif/bazel_test_example/bait_test_runner_hello_world.runfiles/bbi/tools/bait/verif/bazel_test_example/host/test_config.yaml', 'target_pf=svp']
+
+
+
+
+
+print("xxxxxxxxxx")
+  print(cmd)
+  temp = list(cmd)
+  temp[30] = ""
+  cmd = "".join(temp)
+  print("sssssssssss")
+
+subprocess.check_output(['which', 'bait'])
+print(subprocess.check_output(['which', 'bait']))
+sys.stdout.flush()
+
+
+
+
+$BBI_ROOT/tools/bait/bin/bait_wrapper.py target_arch=trinity --valgrind= 
+config_filename=$ROOT/tools/bait/verif/bazel_test_example/host/test_config.yaml target_pf=svp
+
+
+$BBI_ROOT/tools/bait/bin/bait_wrapper.py target_arch=trinity --valgrind= 
+config_filename=$ROOT/tools/bait/verif/bazel_test_example/host/test_config.yaml target_pf=svp
+
+
+s1.find("anc")+3
+
+s1.find("anc")+3
+
+s1.find("anc")+3
+z
+
+
+s1.find("an")+len("an")
+
+s1.find("an")+len("an")
+s1.find("an")+len("an")s1.find("an")+len("an")
+
+Avtalet sägs upp med __1_____ månaders uppsägningstid till hyrestidens utgång. 
+ 
+Vid utebliven uppsägning förlängs kontraktet med __3_____ månad(er) för varje gång. 
+ 
+OBS! Om hyrestiden är längre än tre månader ska uppsägningstiden vara tre månader. 
+
+
+
+--leak-check=full --show-leak-kinds=all
+
+
+
+Avtalet sägs upp med __1_____ månaders uppsägningstid till hyrestidens utgång. 
+ 
+Vid utebliven uppsägning förlängs kontraktet med __3_____ månad(er) för varje gång. 
+ 
+OBS! Om hyrestiden är längre än tre månader ska uppsägningstiden vara tre månader. 
+
+
+
+Avtalet sägs upp med __1_____ månaders uppsägningstid till hyrestidens utgång. 
+ 
+Vid utebliven uppsägning förlängs kontraktet med __3_____ månad(er) för varje gång. 
+ 
+OBS! Om hyrestiden är längre än tre månader ska uppsägningstiden vara tre månader. 
+
+
+
+
+svp - simulator
+	
+
+
+
+
+
+
+
+
+
+   ( false && (a) || (b)) || xrojgoergjoe
+
+
+
+
+
+/** 
+protected:
+  /**
+   * @brief Invoke when the program ends which deletes the memory space
+   * of the object upon completion, to free the memory
+   * and not have memory leaks.
+   
+  virtual ~BBCInterface(){}; 
+*/
+
+
+
+
+noOfRetry = 7; bbieqmhemca_ethproxy.cc
+
+eagleowl giving some warnings
+
+krypton no erros
+
+hawkowl_p1 giving some warnings
+
+
+
+char buff[MAX_BUFF_SIZE] = {0};
+  CU_ASSERT(recvTcpData(buff, hostToRcsAgentFd, 0) == BHP_OK);
+
+  bbiEqmhEmca_ethRouterHdr_t* receivedHeader = (bbiEqmhEmca_ethRouterHdr_t*)buff;
+  CBString retStr = blk2bstr((buff + sizeof(bbiEqmhEmca_ethRouterHdr_t)),
+                             ntohs(receivedHeader->frameLength));
+  CU_ASSERT_EQUAL(receivedHeader->type, BBI_EQMH_EMCA_ETH_ROUTER_TYPE_CMD);
+  CU_ASSERT_EQUAL(receivedHeader->routerData.command.cmd, ETH_ROUTER_CMD_ENDPOINT_DATA);
+  CU_ASSERT_EQUAL(BHP_OK, ETH_updateCpmMacAndVlan((const char*)retStr));
+
+
+
+BHP_TESTCASE_FN(testSuite1_routeItcGwDisabled1)
+{
+  
+
+  char buff[4096] = {0};
+
+  bbiEqmhEmca_ethRouterHdr_t* receivedHeader = (bbiEqmhEmca_ethRouterHdr_t*)buff;
+  CBString retStr = blk2bstr((buff + sizeof(bbiEqmhEmca_ethRouterHdr_t)),
+                             ntohs(receivedHeader->frameLength));
+  CU_ASSERT_EQUAL(BHP_OK, ETH_updateCpmMacAndVlan((const char*)retStr));
+
+
+
+}
+
+
+
+
+FaultyBBMInfoS* info = NULL;
+  // Send to router ETH_ROUTER_CMD_ENDPOINT_DATA command.
+  bbiEqmhEmca_ethRouterHdr_t ethRouterHdr = {0};
+  ethRouterHdr.version = ETH_ROUTER_PROTOCOL_VERSION;
+  ethRouterHdr.type = BBI_EQMH_EMCA_ETH_ROUTER_TYPE_CMD;
+  ethRouterHdr.routerData.command.cmd = ETH_ROUTER_CMD_FAULTY_DSPS;
+
+  BHP_trace(tb_tObj_p, BHP_TRGRP_INFO,
+            "Sending ETH_ROUTER_CMD_FAULTY_DSPS(%d) request...", ETH_ROUTER_CMD_FAULTY_DSPS);
+
+  CU_ASSERT(sendTcpData(&ethRouterHdr, sizeof(ethRouterHdr), hostToRcsAgentFd, 0) == BHP_OK);
+
+  // Receive from router ETH_ROUTER_CMD_ENDPOINT_DATA answer.
+  char buff[MAX_BUFF_SIZE] = {0};
+  CU_ASSERT(recvTcpData(buff, hostToRcsAgentFd, 0) == BHP_OK);
+
+  bbiEqmhEmca_ethRouterHdr_t* receivedHeader = (bbiEqmhEmca_ethRouterHdr_t*)buff;
+  CBString retStr = blk2bstr((buff + sizeof(bbiEqmhEmca_ethRouterHdr_t)),
+                             ntohs(receivedHeader->frameLength));
+  CU_ASSERT_EQUAL(receivedHeader->type, BBI_EQMH_EMCA_ETH_ROUTER_TYPE_CMD);
+  CU_ASSERT_EQUAL(receivedHeader->routerData.command.cmd, ETH_ROUTER_CMD_FAULTY_DSPS);
+
+  info = (FaultyBBMInfoS*)(const char*)retSt
+  CU_ASSERT_EQUAL(BHP_OK, ETH_updateFaultyDsps(info));
+
+  BHP_trace(tb_tObj_p, BHP_TRGRP_INFO,
+            "Received FaultyDsp Data: NoEmcas=%d", info->noEmca);
+
+
+
+{.emca : 0, .vlan : 10, .mac : {0x00, 0x00, 0x00, 0x00, 0x00, 0x00}}
+
+
+
+
+BHP_TESTCASE_FN(testSuite1_ETH_updateCpmMacAndVlan)
+{
+ const char* retStr = R"([ { "lportName": "IE_LPOIE_LPORT_EMCA_3A", "vlan": 10, "mac": [0,0,0,0,0,0]},{ "lportName": "IE_LPORT_CPU_BBI_LOAD_3", "vlan": 10, "mac": [2,0,1,0,0,16]},{ "lportName": "IE_LPORT_EMCA_3A_UNIV", "vlan": 10, "mac": [84,155,114,224,123,176]},{ "lportName": "IE_LPORT_EMCA_3B", "vlan": 10, "mac": [2,0,1,6,0,1]},{ "lportName": "IE_LPORT_EMCA_3B_UNIV", "vlan": 10, "mac": [84,155,114,224,123,177]}])";
+ // passing actual json data
+ CU_ASSERT_EQUAL(BHP_OK, ETH_updateCpmMacAndVlan(retStr));
+ // passing Dummy Json Data
+ CU_ASSERT_EQUAL(BHP_FAILED, ETH_updateCpmMacAndVlan((const char*)"(["":""])"));
+}
+
+
+
+above part of the code is to cover the default switch case if the wrong command is received. can l remove it if it is not needed or maybe add that in the new test case?
+
+
+Developing test Frameworks used internally within Ericsson
+I thought placing it at the end of this suite wouldn't affect the other test cases in the suite. Okay, so can I create a new test suite and add this to it?
+
+ rephrasing the comment in more clear .   
+
+
+
+I have Ordered Table + Lamp from DPJ workspace and uploaded it in SAP Concur.  As per requirement I am attaching the electronic invoice that I have received for the expense 
