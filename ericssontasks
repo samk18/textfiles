@@ -1,0 +1,58 @@
+I have implemented REST related functionalities in main.go of Kafkapixy to check REST status. Returned REST status will be sent to probes if REST doesn't work the probes won't report healthy/ready status only when REST works the probes will report healthy/ready status.
+Now, Probes check both GRPC and REST, in case of failure it will restart the pod.
+
+Here I am attaching the results that are obtained while testing with different ports to see probes are working or not as expected.
+
+
+
+Was doing some prototyping and decided to disable tls using global flag.
+
+But the xxx-rbac-proxy-xxx pods in my deployment won't come up since they are expecting secrets/certificates from their related service.
+
+If global.security.tls.enabled is false, then the RBAC Proxy should not expect related service to provide secrets, nor should it create its own secrets.
+
+
+Added Global parameter "Global.tls.security.enabled" feature in the rbac-helm repo. If global is set to be false, It doesn't expect any secrets from their related service and pods are running.
+
+By default the value is set to true, if global.tls is given, then global config will override the default value.
+.
+
+Summary of changes:
+DR-D1121-067 checks will be added (replacing -050 and -051)
+DR-D1121-050 will be deprecated about images in values.yaml
+GL-D1121-051 will be deprecated about container name as image id.
+
+DR-D1121-101 will be deprecated and replaced by two new: -104 and -105
+DR-D1121-104 describing the registry url override
+DR-D1121-105 describing the repoPath override
+
+Align for all BAM developed services and aggregated "BAM product"
+
+New DR checkers will be enforced strictly at July 7th 2021, until then only warnings.
+
+Time Estimate (Nikolaus): implementation total 1 day (for all services + BAM) + total 1 day verification (for all services + BAM)
+Doc impact estimate (Johan P): 2-4 h, if good input provided by implementor!
+
+==
+Notes regarding DR checker: Will be enforced July 7th!
+During the deprecation period, DR050 and DR051 will be conditionally checked, depends on weather the service has implemented DR
+
+
+Few parameters not exposed in the BAM values.yaml for each service that exposed loadbalancer example: PM Bulk Reporter/ICCR/FM
+
+a)loadBalanceIP:
+b)service:
+annotations:
+addressPoolName: // This parameter is not exposed for PM Bulk reporter/FM service
+
+3. DESCRIPTION OF SOLUTION
+==========================
+
+Few parameters have been added on BAM. The ADP services included in BAM integration that contain the service type of loadbalancer were added in "values.yaml" and those services are 'eric-fh-snmp-alarm-provider, eric-pm-bulk-reporter, eric-tm-ingress-controller-cr-trf, eric-tm-ingress-controller-cr-oam, eric-tm-ingress-controller-cr'.
+
+https://gerrit.ericsson.se/#/c/9970449/
+
+
+I have observed from BAM that the curator is running once in 24 hours and is running based on time not on the size which brings the issue of disk full, causing a full outage on the system. I thought of adding curator should also run based on size. I have added a new feature "action property under actions in Values.yaml" that will implement based on the size of logs but not implemented. 
+
+Looking forward to great learning opportunities and exciting journey ahead!
