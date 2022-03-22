@@ -174,6 +174,23 @@ Yes, I'm in. I would like to specially thank YOU & the hiring team for all the c
 Let me know if you need any additional details. Looking forward to it.
 BR,
 
+\cvsection{References}
+\vspace{-0.55cm}
+\begin{cventries}
+  \cventry
+    {} % Empty position
+     {} % Project
+    {} % Empty location
+    {} % Empty date
+    { %
+  \begin{cvitems} % Description(s) bullet points
+       	\textbf{Abheyraj Madhu} \hspace{4cm} \textbf{Udhay Vuribindi S} \hspace{4.15cm} \textbf {Harish Kumar} \newline
+       	Developer for 5G Mobility Packet Core \hspace{1.5cm} Operative Product Owner \hspace{3.3cm}  Native Cloud RAN - Troubleshooter \newline Developer \hspace{5cm} Ericsson AB \hspace{5cm} Ericsson \newline Ericsson AB  \hspace{4.85 cm} Lund, Sweden \hspace{4.7cm} Stockholm, Sweden \newline Gothenburg, Sweden \hspace{3.66cm} udhay.vuribindi.s@ericsson.com \hspace{2.3cm}  harish.g.kumar@ericsson.com \newline abheyraj.madhu@ericsson.com \hspace{2.35 cm } +46761185763 \hspace{4.6cm} +46730558738\newline +46709866287
+       \end{cvitems}
+      }
+  \cventry
+\end{cventries}
+
 
 
 
