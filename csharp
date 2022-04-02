@@ -1,0 +1,122 @@
+using System;
+using System.IO;
+
+public class HelloWorld
+{
+    public void 
+    public static void Main()
+    {
+        StringBuilder token = new StringBuilder();
+        ArrayList  tokenList = new ArrayList();
+        int count = 0;
+        try
+        {
+          while(True)
+        {
+            char word  = Convert.ToChar(readByte());
+            
+            if(word.Equals(' '))
+            {
+                if(count == 1)
+                {
+                     tokenList.add(int.Parse(token.ToString()));
+                     token.Clear();
+                }
+                else
+                {
+                    if(token.Length!=0)
+                    {
+                      tokenList.add(token.ToString());
+                    }
+                    else
+                    {
+                         throw new AgrumentException("Token is empty");
+                    }
+                    catch(AgrumentException e)
+                    {
+                        Console.WriteLine(e);
+                    }
+                    token.Clear();
+                    if(count<=1)
+                    {
+                        count++;
+                    }
+                }
+            }
+            else
+            {
+                if(word.Equals('\n'))
+                {
+                    count=0;
+                    tokenList.add(token);
+                    token.Clear();
+                }
+                else
+                {
+                    token.Append(word);
+                }
+                
+            }
+        }
+        
+    }
+    catch(FormatException exception)
+    {
+        Console.WriteLine("{0} is not an integer", line);
+    }
+        
+    }
+}
+
+
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+public class HelloWorld{
+    
+    static public void Main ()
+    { 
+        char ch = 'j'; 
+    
+        // Creating byte 
+        byte byt; 
+    
+        // converting character into byte 
+        // using Convert.ToByte() method
+        byt = Convert.ToByte(ch); 
+    char ch1 = Convert.ToChar(byt);
+        // printing character with byte value
+        Console.WriteLine("Byte of char \'" +
+                    ch + "\' : " + byt);
+  Console.WriteLine("Byte of char \'" +
+                    ch + "\' : " + ch1);
+                    bool result;
+                    char ch2 = '\n';
+  
+        // checking if 'G' is equal or not
+  
+        // Here we are passing char G as the
+        // parameter to the Equals Method
+        result = ch2.Equals('\n');
+        StringBuilder sb1 = new StringBuilder("12");
+        int i = int.Parse(sb1.ToString());
+          Console.WriteLine("Byte of char \'" +
+                    ch + "\' : " + i);
+ sb1.Append(ch);
+        // printing the length of "GeeksforGeeks"
+        Console.WriteLine("The String is: {0} \nTotal characters -- {1}",
+                                             sb1.ToString(), sb1.Length);
+  
+        // using the method
+     sb1.Clear();
+      sb1.Append("123");
+  Console.WriteLine("The String is: {0} \nTotal characters -- {1}",
+                                             sb1, sb1.Length);
+       // Console.WriteLine(sb);  
+        
+   
+    } 
+}
